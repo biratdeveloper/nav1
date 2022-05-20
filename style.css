@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(173, 170, 167);
+
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 70%;
+    height: max-content;
+}
+
+nav>ul{
+    width: 100%;
+    list-style: none;
+    text-transform: capitalize;
+}
+nav>ul>li{
+    float: left;
+    margin-left: 30px;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+}
+
+nav>ul>li:hover{
+    cursor: pointer;
+    color:#fff;
+}
+
+nav>ul>li>ul{
+    display: none;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+nav>ul>li>ul::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: -10px;
+}
+
+nav>ul>li:hover ul{
+    display: block;
+    position: absolute;
+    list-style: none;
+}
+
+nav>ul>li>ul>li{
+    padding-top: 10px;
+    width: max-content;
+    height: max-content;
+    color:#000;
+    position: relative;
+}
+
+nav>ul>li>ul>li:hover{
+    color:aqua;
+}
+
+nav>ul>li>ul>li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #444;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition:0.5s ease-in-out;
+}
+
+nav>ul>li>ul>li:hover::after{
+    width: 100%;
+}
+
+
